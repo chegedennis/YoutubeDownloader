@@ -30,6 +30,7 @@ def getdir():
     save_path = dirpath
     destination_display_label.config(text="Destination Folder= " + save_path)
 
+
 # Getting the selection from the Radio Buttons
 def sel():
     selection = str(var.get())
@@ -67,11 +68,7 @@ def download():
             'outtmpl': '%(title)s.%(ext)s',
             'writesubtitles': True,
             'writeautomaticsub': True,
-            'subtitleslangs': 'en',
-            'postprocessors': [{
-                'key': 'FFmpegVideoConvertor',
-                'preferedformat': 'mp4'
-            }]
+            'subtitleslangs': 'en'
         }
 
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
@@ -95,9 +92,9 @@ video = Radiobutton(win, text="BestVideo", variable=var,
                     value="bvideo", activebackground="green", bg="blue", padx=3, font = ("arial", 10, "bold"), command=sel)
 video.grid(column=0, row=2)
 
-thumbnail = Radiobutton(win, text="NormalVideo",
+nvideo = Radiobutton(win, text="NormalVideo",
                         variable=var, value="video", activebackground="green", bg="blue", font = ("arial", 10, "bold"), command=sel)
-thumbnail.grid(column=0, row=2, sticky=E)
+nvideo.grid(column=0, row=2, sticky=E)
 
 # Browse Label
 browse_label = Label(win, text="Choose Download Folder", bg="blue", font = ("arial", 10, "bold"))
