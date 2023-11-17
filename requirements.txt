@@ -1,2 +1,8 @@
+altgraph==0.17.4
 ffmpeg==1.4
+packaging==23.2
+pefile==2023.2.7
+pyinstaller==6.2.0
+pyinstaller-hooks-contrib==2023.10
+pywin32-ctypes==0.2.2
 youtube-dl @ git+https://github.com/ytdl-org/youtube-dl.git@00ef748cc0e35ee60efd0f7a00e373ab8d1af86b
